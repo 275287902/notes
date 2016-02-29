@@ -164,4 +164,3 @@ it('simulates click events', () => {
 你使用 chai 作为测试断言库嘛？相信你会喜欢 [chai-enyzime](https://github.com/producthunt/chai-enzyme) 的！
 ## Redux测试
 测试一个reducer非常简单，它响应actions然后将原来的state转为新的state：
-ß
