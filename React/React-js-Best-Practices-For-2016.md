@@ -134,3 +134,4 @@ MyComponent.propTypes = {
     })
   ).isRequired
 }```
+当然，也可以使用 react-immutable-proptypes 验证 Immutable.js 所编写的属性。
