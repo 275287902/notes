@@ -137,3 +137,8 @@ MyComponent.propTypes = {
 当然，也可以使用 [react-immutable-proptypes](https://www.npmjs.com/package/react-immutable-proptypes) 验证 Immutable.js 所编写的属性。
 
 # 高阶组件
+当前 mixins 将死，而且在 ES6 的 Class 不再支持 mixins，我们应当寻找新方案。
+## 什么是高阶组件？
+```
+PassData({ foo: 'bar' })(MyComponent)
+```
