@@ -34,7 +34,6 @@ Redux 延续并改进了 Flux 的思想，学习了 Elm ，避开了 Flux 的复
 API 经常会返回嵌套的资源。这在 Flux 或基于 Redux 的架构中处理起来会非常困难。我们推荐使用 [normalizr](https://github.com/gaearon/normalizr) 这类库将数据进行扁平化处理，尽可能地扁平化state.  
 像这样：  
 ```const data = normalize(response, arrayOf(schema.user))
-
 state = _.merge(state, data.entities)```  
 （我们使用[isomorphic-fetch](https://www.npmjs.com/package/isomorphic-fetch)与API进行通信）  
 
