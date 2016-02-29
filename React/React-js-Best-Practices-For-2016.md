@@ -30,8 +30,8 @@ Flux 在管理App的全局状态时很有用,比如：管理已登录用户状�
 如果你想了解更多关于 Flux 的信息,建议阅读 [The Evolution of Flux Frameworks](https://medium.com/@dan_abramov/the-evolution-of-flux-frameworks-6c16ad26bb31#.90lamiv5l).
 
 ## 使用 Redux
-Redux 是一个 JavaScript App的可预测 state 容器. 
-如果你觉得需要 Flux 或者相似的解决方案,你应该了解一下 redux,并学习 [Dan Abramov](https://twitter.com/dan_abramov) 的 [Getting started with redux](https://egghead.io/series/getting-started-with-redux),这能够迅速提高你的开发技能. 
+Redux 是一个 JavaScript App的可预测 state 容器.   
+如果你觉得需要 Flux 或者相似的解决方案,你应该了解一下 redux,并学习 [Dan Abramov](https://twitter.com/dan_abramov) 的 [Getting started with redux](https://egghead.io/series/getting-started-with-redux),这能够迅速提高你的开发技能.   
 Redux 延续并改进了 Flux 的思想,学习了 Elm ,避开了 Flux 的复杂度(译者注：[Elm](http://elm-lang.org) 是一门函数式编程语言).  
 
 ### 扁平化 state
@@ -44,7 +44,7 @@ state = _.merge(state, data.entities)
 (我们使用[isomorphic-fetch](https://www.npmjs.com/package/isomorphic-fetch)与API进行通信)  
 
 ### 使用 immutable state
-共享的可变性 state 是罪恶的根源. —— Pete Hunt, React.js Conf 2015  
+共享的可变性 state 是罪恶的根源. - Pete Hunt, React.js Conf 2015  
 ![](https://risingstack-blog.s3.amazonaws.com/2016/Jan/immutable_logo_for_react_js_best_practices-1453211749818.png)  
 [不可变对象](https://en.wikipedia.org/wiki/Immutable_object)是指在创建后不可再被修改的对象. 
 不可变对象可以让我们免于痛苦,并且通过引用级的比对检查来**提升渲染性能**.比如在 ```shouldComponentUpdate``` 中：  
