@@ -43,3 +43,4 @@ state = _.merge(state, data.entities)```
 ![](https://risingstack-blog.s3.amazonaws.com/2016/Jan/immutable_logo_for_react_js_best_practices-1453211749818.png)  
 [不可变对象](https://en.wikipedia.org/wiki/Immutable_object)是指在创建后不可再被修改的对象。  
 
+
