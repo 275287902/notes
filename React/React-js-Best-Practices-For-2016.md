@@ -30,9 +30,12 @@ Redux 是一个 JavaScript App的可预测 state 容器。
 如果你觉得需要 Flux 或者相似的解决方案，你应该了解一下 redux，并学习 [Dan Abramov](https://twitter.com/dan_abramov) 的 [Getting started with redux](https://egghead.io/series/getting-started-with-redux)，这能够迅速提高你的开发技能。  
 Redux 延续并改进了 Flux 的思想，学习了 Elm ，避开了 Flux 的复杂度（译者注：[Elm](http://elm-lang.org) 是一门函数式编程语言）.  
 
-### 扁平化state
+### 扁平化 state
 API 经常会返回嵌套的资源。这在 Flux 或基于 Redux 的架构中处理起来会非常困难。我们推荐使用 [normalizr](https://github.com/gaearon/normalizr) 这类库将数据进行扁平化处理，尽可能地扁平化state.  
 像这样：  
 ```const data = normalize(response, arrayOf(schema.user))
 
-state = _.merge(state, data.entities)```
+state = _.merge(state, data.entities)```  
+（我们使用[isomorphic-fetch](https://www.npmjs.com/package/isomorphic-fetch)与API进行通信）  
+
+### 使用 immutable state
