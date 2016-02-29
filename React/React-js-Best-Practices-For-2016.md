@@ -33,8 +33,10 @@ Redux 延续并改进了 Flux 的思想，学习了 Elm ，避开了 Flux 的复
 ### 扁平化 state
 API 经常会返回嵌套的资源。这在 Flux 或基于 Redux 的架构中处理起来会非常困难。我们推荐使用 [normalizr](https://github.com/gaearon/normalizr) 这类库将数据进行扁平化处理，尽可能地扁平化state.  
 像这样：  
-```const data = normalize(response, arrayOf(schema.user))
-state = _.merge(state, data.entities)```  
+```
+const data = normalize(response, arrayOf(schema.user))
+state = _.merge(state, data.entities)
+```  
 （我们使用[isomorphic-fetch](https://www.npmjs.com/package/isomorphic-fetch)与API进行通信）  
 
 ### 使用 immutable state
@@ -42,9 +44,20 @@ state = _.merge(state, data.entities)```
 ![](https://risingstack-blog.s3.amazonaws.com/2016/Jan/immutable_logo_for_react_js_best_practices-1453211749818.png)  
 [不可变对象](https://en.wikipedia.org/wiki/Immutable_object)是指在创建后不可再被修改的对象。  
 不可变对象可以让我们免于痛苦，并且通过引用级的比对检查来**提升渲染性能**。比如在 ```shouldComponentUpdate``` 中：  
-```shouldComponentUpdate(nexProps) {
+```
+shouldComponentUpdate(nexProps) {
  // 不进行对象的深度对比
  return this.props.immutableFoo !== nexProps.immutableFoo
-}```
+}
+```
 
 ### 如何在JavaScript中实现不可变?
+本办法是小心的写代码,示例代码如下，你需要在单元测试中通过 [deep-freeze-node](https://www.npmjs.com/package/deep-freeze-node) 来反复验证。
+```
+return {  
+  ...state,
+  foo
+}
+ 
+return arr1.concat(arr2)
+```
