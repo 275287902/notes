@@ -98,4 +98,4 @@ require.ensure([], () => {
 ```
 这对于大型应用十分有用，每次部署之后用户浏览器不用下载那些```很少会使用到的代码```，比如Profile页面。  
 更多代码块将导致更多 HTTP 请求 — 但是使用 HTTP/2 多路复用就没有问题.  
-结合 [chunk hashing](https://christianalfoni.github.io/react-webpack-cookbook/Optimizing-caching.html)，可以在代码更新之后优化缓存命中率。
+结合 [chunk hashing](https://christianalfoni.github.io/react-webpack-cookbook/Optimizing-caching.html)，可以在代码更新之后优化缓存命中率。  
