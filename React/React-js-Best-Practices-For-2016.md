@@ -62,7 +62,7 @@ return {
 return arr1.concat(arr2)
 ```
 相信我，这是最明显的例子了.  
-更简单也更自然的方式就是使用 Immutable.js.
+更简单也更自然的方式是使用 Immutable.js.
 ```
 import { fromJS } from 'immutable'
 
