@@ -1,4 +1,6 @@
 Jason@Maxleap  
+原文链接: https://blog.risingstack.com/react-js-best-practices-for-2016  
+
 译者按：最近React(web/native)依旧如火如荼,相信大家都跃跃欲试,我们团队也开始在React领域有所尝试.  
 2016年应该是 React 逐渐走向成熟的一年,让我们一起来看看国外的开发者们都总结了哪些"最佳实践".  
 =============以下为译文==============  
@@ -232,4 +234,5 @@ import sample from 'lodash/sample';
 # 尽情享用这些 React.js 的最佳实践
 有些优秀的技术和库其实跟React都几乎没关系,但要关注社区的其他人都在做些什么。2015这一年,React社区被 [Elm 架构](https://github.com/evancz/elm-architecture-tutorial/)启发了很多.    
 如果你知道其它在2016年必要的 React.js 工具,请在下面给我们留言!
+
 
