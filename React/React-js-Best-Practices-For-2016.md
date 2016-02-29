@@ -103,3 +103,4 @@ require.ensure([], () => {
 对于 react-router 的未来规划，可以去查看博客 [Ryan Florence](https://twitter.com/ryanflorence): [Welcome to Future of Web Application Delivery](https://medium.com/@ryanflorence/welcome-to-future-of-web-application-delivery-9750b7564d9f#.vuf3e1nqi).  
 
 # 组件
+很多人都在抱怨JSX，但首先要知道，它在 React 中是可选的。  
