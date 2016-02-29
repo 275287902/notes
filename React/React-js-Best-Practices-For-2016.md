@@ -83,4 +83,4 @@ Immutable.js 非常之快，背后理念也非常美妙.哪怕你并不准备使
 几乎所有 App 都有路由功能。如果你在浏览器中使用 React.js，你将会在挑选库的时候遇到选择性问题.  
 我们的选择是react-router, 来自优秀的 rackt 社区。Racket 给 React.js 爱好者们带来了很多高质量资源。  
 要使用 react-router,请查看它的文档.但更重要的是：如果你使用Flux/Redux，我们推荐你将路由 state 与 store 或全局 state 保持同步.  
-同步的路由 state 会帮助你控制 Flux/Redux 的 Actions 的路由行为，并能够在组件中读取路由状态和参数。
+同步的路由 state 会帮助你控制 Flux/Redux 的 Actions 的路由行为，并能在组件中读取路由状态和参数。
