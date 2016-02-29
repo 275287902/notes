@@ -227,7 +227,7 @@ import sample from 'lodash/sample';
 # 代码检查
 或许你已经给你的 JavaScript 代码制定了代码规范,但是你知道也有用于 React 的代码规范了吗？我们建议你选择一个代码规范,然后照着它说的来做.  
 在 RisingStack,我们也将 linters 强制运行在 CI 系统上,```git push``` 亦然.可以试试 ```pre-push``` 或者 ```pre-commit```.   
-我们使用标准的 JavaScript 代码风格,并使用 [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) 来检查React.js代码. 
+我们使用标准的 JavaScript 代码风格,并使用 [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) 来检查React.js代码.   
 (是的,我们已经不再使用分号了)
 # GraphQL和Relay
 相对而言 GraphQL 和 Relay 还属于新技术,在 RisingStack,我们还没有在产品环境中使用它们,但保持关注. 
