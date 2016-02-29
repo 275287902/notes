@@ -73,7 +73,7 @@ Immutable.js 非常之快，背后理念也非常美妙.哪怕你并不准备使
 
 ### Observables and Reactive 解决方案
 如果你不喜欢 Flux/Redux 或者只是想要更加   reactive，不用失望！还有很多数据处理的方案供你选择，这里有一个可能是你想要的库的简单列表：
-* cycle.js（“一个更清爽的reactive框架”）
+* cycle.js（“一个更清晰简单的函数式和 reactive JavaScript 框架”）
 * rx-flux（“Flux与Rxjs结合的产物”）
 * redux-rx（“Redux的Rxjs工具库”）
 * mobservable（“可观测的数据，reactive的功能，简洁的代码”）
