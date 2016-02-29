@@ -220,7 +220,7 @@ import sample from 'lodash/sample';
 ## 组件级别的 hot reload
 如果你曾使用过hot reload编写单页面应用,当你在处理某些与状态相关的事情时,可能你就会明白当你在编辑器中点击保存,整个页面就重新加载了是多么令人讨厌.你需要逐步点击操作到刚才的环节,然后在这样的重复中奔溃.   
 通过 React,在重载组件的同时保持组件状态已经成为可能,从此不再痛苦!    
-关于如何搭建hot reload,可参考 [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate)  
+关于如何搭建hot reload,可参考 [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate).
 # 使用ES2015
 前面有提到过,我们在 React.js 组件中使用 JSX,然后使用 Babel.js 进行编译.  
  Babel 的能力远不止这些,它也可以让我们现在就可以给浏览器编写 ES6/ES2015 代码.在RisingStack,我们在服务器端和客户端都使用了ES2015的特性,ES2015已经可以在最新的LTS Node.js版本中使用了. 
