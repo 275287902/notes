@@ -197,7 +197,7 @@ it('should dispatch action', (done) => {
 
 
 # 使用 npm
-虽然 React.js 并不依赖代码打包工具就可以工作得很好,但我们还是推荐使用 Webpack 或者 Browserify 来发挥 npm 的能力.Npm 有很多 React.js 的包,可以帮助你优雅地管理依赖. 
+虽然 React.js 并不依赖代码打包工具就可以工作得很好,但我们还是推荐使用 Webpack 或者 Browserify 来发挥 npm 的能力.Npm 有很多 React.js 的包,可以帮助你优雅地管理依赖.   
 (请不要忘记复用你自己的组件,这是优化代码的绝佳方式.)  
 
 ## Bundle 大小
