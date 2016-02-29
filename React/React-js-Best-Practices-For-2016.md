@@ -231,7 +231,7 @@ import sample from 'lodash/sample';
 (是的,我们已经不再使用分号了)
 # GraphQL和Relay
 相对而言 GraphQL 和 Relay 还属于新技术,在 RisingStack,我们还没有在产品环境中使用它们,但保持关注.   
-我们写过一个 Relay 的 MongoDB ORM 库,叫做 graffiti,可以使用你已有的 mongoose models 来创建 GraphQL server. 
+我们写过一个 Relay 的 MongoDB ORM 库,叫做 graffiti,可以使用你已有的 mongoose models 来创建 GraphQL server.   
 如果你想要学习这些新技术,我们建议你可以找来玩一玩. 
 # 尽情享用这些 React.js 的最佳实践
 有些优秀的技术和库其实跟React都几乎没关系,但要关注社区的其他人都在做些什么.2015这一年,React社区被 [Elm 架构](https://github.com/evancz/elm-architecture-tutorial/)启发了很多.    
