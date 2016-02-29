@@ -125,4 +125,12 @@ class HelloMessage extends React.Component {
 相对于mixins,我们更喜欢[高阶组件](http://jamesknelson.com/structuring-react-applications-higher-order-components/)，所以保留 createClass 更像是一个语法问题，而不是技术问题. 我们认为使用 createClass  或者 React.Component 只是选择不同而已,没有对错之分.
 ##属性类型 
 如果你仍然没有检查 熟悉类型，那么你应该从2016年开始做起，这将为你节省大量的时间，相信我。 
-
+```
+MyComponent.propTypes = {  
+  isLoading: PropTypes.bool.isRequired,
+  items: ImmutablePropTypes.listOf(
+    ImmutablePropTypes.contains({
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired
+}```
