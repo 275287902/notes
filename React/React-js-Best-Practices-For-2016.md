@@ -85,4 +85,3 @@ Immutable.js 非常之快，背后理念也非常美妙.哪怕你并不准备使
 要使用 react-router,请查看它的文档.但更重要的是：如果你使用Flux/Redux，我们推荐你将路由 state 与 store 或全局 state 保持同步.  
 同步的路由 state 会帮助你控制 Flux/Redux 的 Actions 的路由行为，并能在组件中读取路由状态和参数。  
 
-
