@@ -112,3 +112,13 @@ JSX 是一种与 XML 类似的 JavaScript 语法扩展。你可以通过一个�
 如果你想了解更多 JSX 的内容，查看文章 [JSX Looks Like An Abomination – But it’s Good for You](https://medium.com/javascript-scene/jsx-looks-like-an-abomination-1c1ec351a918#.ca28nvee6)  
 
 
+
+## 使用 Classes
+React 与 ES2015 的 Class 语法搭配的很好。  
+```
+class HelloMessage extends React.Component {  
+  render() {
+    return <div>Hello {this.props.name}</div>
+  }
+}
+```
