@@ -146,3 +146,6 @@ PassData({ foo: 'bar' })(MyComponent)
 在 RisingStack，我们也喜欢将数据拉取和控制类的逻辑分离到高阶组件中，以尽可能地保持 view 层的简单。  
 
 # 测试
+保证测试的高代码覆盖率是开发周期中的重要一环。幸运的是，React.js 社区有很多这样的库来帮助我们。
+## 组件测试
+AirBnb 的 [enzyme](https://github.com/airbnb/enzyme) 是我们最喜爱的组件测试库之一。它的浅渲染特性可以对组件的逻辑和渲染结果进行测试，非常神奇.它现在还不能替代selenium测试，但是将前端测试提升到了一个新高度。
