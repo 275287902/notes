@@ -209,3 +209,7 @@ import sortBy from 'lodash/sortBy';
 import map from 'lodash/map';  
 import sample from 'lodash/sample';  
 ```
+查看[Reduce Your bundle.js File Size By Doing This One Thing](https://lacke.mn/reduce-your-bundle-js-file-size/)，以获取更多信息。  
+我们也喜欢将代码分离到至少 vendors.js 和 app.js 两个文件，因为 vendors 相对于我们的代码库来说更新频率低很多。  
+对输出文件进行 hash 命名（WebPack中的chunk hash），并使用长缓存，我们可以显著地减少访问用户需要下载的代码。结合代码懒加载，优化效果非常显著。  
+如果你还不太熟悉 Webpack，可以查看这本优秀的 [React webpack cookbook](https://christianalfoni.github.io/react-webpack-cookbook)。  
