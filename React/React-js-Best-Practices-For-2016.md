@@ -87,4 +87,4 @@ Immutable.js 非常之快，背后理念也非常美妙.哪怕你并不准备使
 Redux 用户可以通过 [redux-simple-router](https://github.com/rackt/redux-simple-router) 这个库轻松实现它。
 
 ## 代码分割，惰性加载
-只有一小部分 ```webpack``` 的用户知道应用代码可以分割成多个 JavaScript 块。
+只有一小部分 ```webpack``` 用户知道 App 代码可以分割成多个 JavaScript 块。
