@@ -133,7 +133,8 @@ MyComponent.propTypes = {
       name: PropTypes.string.isRequired,
     })
   ).isRequired
-}```
+}
+```
 当然，也可以使用 [react-immutable-proptypes](https://www.npmjs.com/package/react-immutable-proptypes) 验证 Immutable.js 所编写的属性。
 
 # 高阶组件
@@ -148,4 +149,14 @@ PassData({ foo: 'bar' })(MyComponent)
 # 测试
 保证测试的高代码覆盖率是开发周期中的重要一环。幸运的是，React.js 社区有很多这样的库来帮助我们。
 ## 组件测试
-AirBnb 的 [enzyme](https://github.com/airbnb/enzyme) 是我们最喜爱的组件测试库之一。它的浅渲染特性可以对组件的逻辑和渲染结果进行测试，非常神奇.它现在还不能替代selenium测试，但是将前端测试提升到了一个新高度。
+AirBnb 的 [enzyme](https://github.com/airbnb/enzyme) 是我们最喜爱的组件测试库之一。使用它的浅渲染特性可以对组件的逻辑和渲染结果进行测试，非常神奇.它现在还不能替代selenium测试，但是将前端测试提升到了一个新高度。
+```
+it('simulates click events', () => {  
+  const onButtonClick = sinon.spy()
+  const wrapper = shallow(
+    <Foo onButtonClick={onButtonClick} />
+  )
+  wrapper.find('button').simulate('click')
+  expect(onButtonClick.calledOnce).to.be.true
+})
+```
