@@ -107,7 +107,7 @@ require.ensure([], () => {
 对于 react-router 的未来规划,可以去查看博客 [Ryan Florence](https://twitter.com/ryanflorence): [Welcome to Future of Web Application Delivery](https://medium.com/@ryanflorence/welcome-to-future-of-web-application-delivery-9750b7564d9f#.vuf3e1nqi).  
 
 # 组件
-很多人都在抱怨JSX,但首先要知道,它在 React 中是可选的. 
+很多人都在抱怨JSX,但首先要知道,它在 React 中是可选的.   
 JSX 在最后都会通过 Babel 被编译成 JavaScript.你可以直接编写 JavaScript 来替代 JSX,但是在处理 HTML 的时候使用 JSX 会感觉更加自然.
 特别是对于不懂技术的人来说,他们只可以理解和修改必要的部分.
 
