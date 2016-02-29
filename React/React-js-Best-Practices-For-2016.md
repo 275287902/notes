@@ -39,4 +39,4 @@ state = _.merge(state, data.entities)```
 （我们使用[isomorphic-fetch](https://www.npmjs.com/package/isomorphic-fetch)与API进行通信）  
 
 ### 使用 immutable state
-共享的可变性 state 是罪恶的根源. —— Pete Hunt, React.js Conf 2015
+共享的可变性 state 是罪恶的根源. —— Pete Hunt, React.js Conf 2015  
