@@ -35,7 +35,7 @@ API 经常会返回嵌套的资源。这在 Flux 或基于 Redux 的架构中处
 像这样：  
 ```const data = normalize(response, arrayOf(schema.user))
 
-state = _.merge(state, data.entities)```  
+state = _.merge(state, data.entities)```
 （我们使用[isomorphic-fetch](https://www.npmjs.com/package/isomorphic-fetch)与API进行通信）  
 
 ### 使用 immutable state
