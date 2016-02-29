@@ -202,7 +202,7 @@ it('should dispatch action', (done) => {
 
 ## Bundle 大小
 这本身不是一个 React 相关的问题,但是大多数人都在打包他们的 React 应用,所以我有必要在这里提一下.   
-当你打包源代码的时候,要时刻警惕打包后文件的大小.想要**将其控制在最小体积**,你需要思考如何如何 require/import 依赖. 
+当你打包源代码的时候,要时刻警惕打包后文件的大小.想要**将其控制在最小体积**,你需要思考如何如何 require/import 依赖.   
 查看下面的代码片段,这两种方式可以对输出大小会产生重大影响：
 ```
 import { concat, sortBy, map, sample } from 'lodash'
