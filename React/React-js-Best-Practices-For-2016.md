@@ -46,3 +46,5 @@ state = _.merge(state, data.entities)```
  // 不进行对象的深度对比
  return this.props.immutableFoo !== nexProps.immutableFoo
 }```
+
+### 如何在JavaScript中实现不可变?
