@@ -72,4 +72,4 @@ const newState = foo.set('bar', 'baz')
 Immutable.js 非常之快，背后理念也非常美妙.哪怕你并不准备使用它，我也推荐阅读这个由 [Lee Byron](https://twitter.com/leeb) 所制作的视频 [Immutable Data and React](https://www.youtube.com/watch?v=I7IdS-PbEgI)。它非常深刻的讲解了 Immutable.js 的工作原理。  
 
 ### Observables and Reactive 解决方案
-如果你不喜欢 Flux/Redux 或者只是想要更加   reactive，不用失望！还有很多方案供你选择，这里有一个相关库的简要列表表供你参考：
+如果你不喜欢 Flux/Redux 或者只是想要更加   reactive，不用失望！还有很多数据处理的方案供你选择，这里有一个可能是你想要的库的简单列表：
