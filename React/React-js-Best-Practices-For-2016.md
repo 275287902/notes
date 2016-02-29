@@ -70,3 +70,5 @@ const state = fromJS({ bar: 'biz' })
 const newState = foo.set('bar', 'baz') 
 ```
 Immutable.js 非常之快，背后理念也非常美妙.哪怕你并不准备使用它，我也推荐阅读这个由 [Lee Byron](https://twitter.com/leeb) 所制作的视频 [Immutable Data and React](https://www.youtube.com/watch?v=I7IdS-PbEgI)。它非常深刻的讲解了 Immutable.js 的工作原理。  
+
+### Observables and Reactive 解决方案
