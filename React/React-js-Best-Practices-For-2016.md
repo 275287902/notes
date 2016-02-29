@@ -163,5 +163,17 @@ it('simulates click events', () => {
 看起来非常简洁，不是吗？  
 你使用 chai 作为测试断言库嘛？相信你会喜欢 [chai-enyzime](https://github.com/producthunt/chai-enzyme) 的！
 ## Redux测试
-测试一个 reducer 非常简单，它响应 actions 然后将原来的 state 转为新的 state：
+测试一个 reducer 非常简单，它响应新到来的 actions 然后将原来的 state 转换为新的 state：
 
+```
+it('should set token', () => {  
+  const nextState = reducer(undefined, {
+    type: USER_SET_TOKEN,
+    token: 'my-token'
+  })
+ 
+  // immutable.js state output
+  expect(nextState.toJS()).to.be.eql({
+    token: 'my-token'
+  })
+})```
