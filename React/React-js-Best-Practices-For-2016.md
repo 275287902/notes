@@ -215,7 +215,7 @@ import sample from 'lodash/sample';
 ```
 查看[Reduce Your bundle.js File Size By Doing This One Thing](https://lacke.mn/reduce-your-bundle-js-file-size/),以获取更多信息.   
 我们也喜欢将代码分离到至少 vendors.js 和 app.js 两个文件,因为 vendors 相对于我们的代码库来说更新频率低很多.   
-对输出文件进行 hash 命名(WebPack中的chunk hash),并使用长缓存,我们可以显著地减少访问用户需要下载的代码.结合代码懒加载,优化效果非常显著. 
+对输出文件进行 hash 命名(WebPack中的chunk hash),并使用长缓存,我们可以显著地减少访问用户需要下载的代码.结合代码懒加载,优化效果非常显著.  
 如果你还不太熟悉 Webpack,可以查看这本优秀的 [React webpack cookbook](https://christianalfoni.github.io/react-webpack-cookbook). 
 ## 组件级别的 hot reload
 如果你曾使用过hot reload编写单页面应用,当你在处理某些与状态相关的事情时,可能你就会明白当你在编辑器中点击保存,整个页面就重新加载了是多么令人讨厌.你需要逐步点击操作到刚才的环节,然后在这样的重复中奔溃. 
