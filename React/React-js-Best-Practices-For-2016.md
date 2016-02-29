@@ -142,4 +142,7 @@ MyComponent.propTypes = {
 ```
 PassData({ foo: 'bar' })(MyComponent)
 ```
-简单来讲,从由原始组件创造一个新的组件并且扩展它的行为。你可以在多种场景来使用它，比如鉴权：```requireAuth({ role: 'admin' })(MyComponent)```(检查用户权限，如果未登录就跳转）,或者将组件与 Flux/Redux 的 store 连通。
+简单来讲,从由原始组件创造一个新的组件并且扩展它的行为。你可以在多种场景来使用它，比如鉴权：```requireAuth({ role: 'admin' })(MyComponent)```(检查用户权限，如果未登录就跳转）,或者将组件与 Flux/Redux 的 store 连通。  
+在 RisingStack，我们也喜欢将数据拉取和控制类的逻辑分离到高阶组件中，以尽可能地保持 view 层的简单。  
+
+# 测试
