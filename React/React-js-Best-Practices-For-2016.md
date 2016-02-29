@@ -88,3 +88,11 @@ Redux 用户可以通过 [redux-simple-router](https://github.com/rackt/redux-si
 
 ## 代码分割，惰性加载
 只有一小部分 ```webpack``` 用户知道 App 代码可以分割成多个 JavaScript 块。  
+```
+require.ensure([], () => {  
+  const Profile = require('./Profile.js')
+  this.setState({
+    currentComponent: Profile
+  })
+})
+```
