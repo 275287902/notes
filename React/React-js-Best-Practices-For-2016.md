@@ -40,4 +40,5 @@ state = _.merge(state, data.entities)```
 
 ### 使用 immutable state
 共享的可变性 state 是罪恶的根源. —— Pete Hunt, React.js Conf 2015  
-![](https://risingstack-blog.s3.amazonaws.com/2016/Jan/immutable_logo_for_react_js_best_practices-1453211749818.png)
+![](https://risingstack-blog.s3.amazonaws.com/2016/Jan/immutable_logo_for_react_js_best_practices-1453211749818.png)  
+
