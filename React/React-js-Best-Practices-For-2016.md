@@ -65,7 +65,7 @@ return arr1.concat(arr2)
 更简单也更自然的方式就是使用 Immutable.js.
 ```
 import { fromJS } from 'immutable'
- 
+
 const state = fromJS({ bar: 'biz' })  
 const newState = foo.set('bar', 'baz') 
 ```
