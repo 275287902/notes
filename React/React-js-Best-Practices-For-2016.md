@@ -27,5 +27,5 @@ Flux 在管理App的全局状态时很有用，比如：管理已登录用户状
 
 ## 使用 Redux
 Redux 是一个 JavaScript App的可预测 state 容器。  
-如果你觉得需要 Flux 或者相似的解决方案，你应该了解一下 redux，并学习 Dan Abramov 的 redux 入门指南，这能够迅速提高你的开发技能。  
+如果你觉得需要 Flux 或者相似的解决方案，你应该了解一下 redux，并学习 [Dan Abramov](https://twitter.com/dan_abramov) 的 [Getting started with redux](https://egghead.io/series/getting-started-with-redux)，这能够迅速提高你的开发技能。  
 Redux 延续并改进了 Flux 的思想，学习了 Elm ，避开了 Flux 的复杂度（译者注：[Elm](http://elm-lang.org) 是一门函数式编程语言）.  
