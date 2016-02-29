@@ -24,3 +24,6 @@ Flux 提供了一种非常清晰的方式来存储和更新**App 全局 state**�
 Flux 在管理App的全局状态时很有用，比如：管理已登录用户状态，路由状态，或者是活跃账号状态，但若是用来管理临时数据或者本地数据，立刻就会变得很痛苦。  
 我们不推荐使用 Flux 来管理路由相关的数据，比如 /items/:itemId。获取路由数据并存储在组件的 state 之中。这种情况下，它会在组件销毁时一起被销毁。
 如果你想了解更多关于 Flux 的信息，建议阅读 [The Evolution of Flux Frameworks](https://medium.com/@dan_abramov/the-evolution-of-flux-frameworks-6c16ad26bb31#.90lamiv5l)。
+
+## 使用 Redux
+Redux是一个JavaScript App的可预测 state 容器。
