@@ -163,7 +163,7 @@ it('simulates click events', () => {
 看起来非常简洁，不是吗？  
 你使用 chai 作为测试断言库嘛？相信你会喜欢 [chai-enyzime](https://github.com/producthunt/chai-enzyme) 的！
 ## Redux测试
-测试一个 reducer 非常简单，它响应新到来的 actions 然后将原来的 state 转换为新的 state：
+**测试 reducer** 非常简单，它响应新到来的 actions 然后将原来的 state 转换为新的 state：
 
 ```
 it('should set token', () => {  
@@ -177,4 +177,35 @@ it('should set token', () => {
     token: 'my-token'
   })
 })
+```
+**测试 actions** 也很简单，但是异步 actions 就不太一样了。对于测试异步的 actions 来说，我们推荐使用  [redux-mock-store](https://www.npmjs.com/package/redux-mock-store)，非常有帮助。  
+```
+it('should dispatch action', (done) => {  
+  const getState = {}
+  const action = { type: 'ADD_TODO' }
+  const expectedActions = [action]
+
+  const store = mockStore(getState, expectedActions, done)
+  store.dispatch(action)
+})
+```
+关于更深入的 [redux测试](http://rackt.org/redux/docs/recipes/WritingTests.html) ，请参考官方文档。  
+
+
+# 使用 npm
+虽然 React.js 并不依赖代码打包工具就可以工作得很好，但我们还是推荐使用 Webpack 或者 Browserify 来发挥 npm 的能力。Npm 有很多 React.js 的包，可以帮助你优雅地管理依赖。  
+（请不要忘记复用你自己的组件，这是优化代码的绝佳方式.）  
+
+## Bundle 大小
+这本身不是一个 React 相关的问题，但是大多数人都在打包他们的 React 应用，所以我有必要在这里提一下。  
+当你打包源代码的时候，要时刻警惕打包后文件的大小。想要**将其控制在最小体积**，你需要思考如何如何 require/import 依赖。  
+查看下面的代码片段，这两种方式可以对输出大小会产生重大影响：
+```
+import { concat, sortBy, map, sample } from 'lodash'
+ 
+// vs.
+import concat from 'lodash/concat';  
+import sortBy from 'lodash/sortBy';  
+import map from 'lodash/map';  
+import sample from 'lodash/sample';  
 ```
