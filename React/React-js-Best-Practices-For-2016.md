@@ -109,4 +109,6 @@ JSX 在最后都会通过 Babel 被编译成 JavaScript。你可以直接编写 
 
 JSX 是一种与 XML 类似的 JavaScript 语法扩展。你可以通过一个简单的 JSX 语法转换器来转换它。 — [JSX in depth](https://facebook.github.io/react/docs/jsx-in-depth.html)  
 
+如果你想了解更多 JSX 的内容，查看文章 [JSX Looks Like An Abomination – But it’s Good for You](https://medium.com/javascript-scene/jsx-looks-like-an-abomination-1c1ec351a918#.ca28nvee6)  
+
 
