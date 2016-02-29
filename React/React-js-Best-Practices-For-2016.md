@@ -160,3 +160,5 @@ it('simulates click events', () => {
   expect(onButtonClick.calledOnce).to.be.true
 })
 ```
+看起来非常简洁，不是吗？
+你使用 chai 作为测试断言库嘛？相信你会喜欢 [chai-enyzime](https://github.com/producthunt/chai-enzyme) 的！
