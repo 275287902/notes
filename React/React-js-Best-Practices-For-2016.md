@@ -122,3 +122,4 @@ class HelloMessage extends React.Component {
   }
 }
 ```
+相对于mixins,我们更喜欢[高阶组件](http://jamesknelson.com/structuring-react-applications-higher-order-components/)，所以保留 createClass 更像是一个语法问题，而不是技术问题. 我们认为使用 createClass  或者 React.Component 只是选择不同而已,没有对错之分.
