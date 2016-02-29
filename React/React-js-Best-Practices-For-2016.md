@@ -42,7 +42,7 @@ state = _.merge(state, data.entities)```
 共享的可变性 state 是罪恶的根源. —— Pete Hunt, React.js Conf 2015  
 ![](https://risingstack-blog.s3.amazonaws.com/2016/Jan/immutable_logo_for_react_js_best_practices-1453211749818.png)  
 [不可变对象](https://en.wikipedia.org/wiki/Immutable_object)是指在创建后不可再被修改的对象。  
-不可变对象可以让我们免于痛苦，并且通过引用级的比对检查来**提升渲染性能**。比如在```shouldComponentUpdate```中：  
+不可变对象可以让我们免于痛苦，并且通过引用级的比对检查来**提升渲染性能**。比如在 ```shouldComponentUpdate``` 中：  
 ```shouldComponentUpdate(nexProps) {
  // 不进行对象的深度对比
  return this.props.immutableFoo !== nexProps.immutableFoo
