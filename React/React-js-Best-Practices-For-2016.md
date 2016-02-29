@@ -46,4 +46,3 @@ state = _.merge(state, data.entities)```
  // 不进行对象的深度对比
  return this.props.immutableFoo !== nexProps.immutableFoo
 }```
-
