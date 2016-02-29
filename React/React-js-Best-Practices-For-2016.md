@@ -176,4 +176,5 @@ it('should set token', () => {
   expect(nextState.toJS()).to.be.eql({
     token: 'my-token'
   })
-})```
+})
+```
