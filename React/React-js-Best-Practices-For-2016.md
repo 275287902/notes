@@ -101,3 +101,5 @@ require.ensure([], () => {
 结合 [chunk hashing](https://christianalfoni.github.io/react-webpack-cookbook/Optimizing-caching.html)，可以在代码更新之后优化缓存命中率。  
 下个版本的 react-router 将会对代码分隔做更多支持。
 对于 react-router 的未来规划，可以去查看博客 [Ryan Florence](https://twitter.com/ryanflorence): [Welcome to Future of Web Application Delivery](https://medium.com/@ryanflorence/welcome-to-future-of-web-application-delivery-9750b7564d9f#.vuf3e1nqi).  
+
+# 组件
