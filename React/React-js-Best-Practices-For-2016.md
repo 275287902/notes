@@ -142,3 +142,4 @@ MyComponent.propTypes = {
 ```
 PassData({ foo: 'bar' })(MyComponent)
 ```
+简单来讲,从由原始组件创造一个新的组件并且扩展它的行为。你可以在多种场景来使用它，比如鉴权：```requireAuth({ role: 'admin' })(MyComponent)```(检查用户权限，如果未登录就跳转）,或者将组件与 Flux/Redux 的 store 连通。
