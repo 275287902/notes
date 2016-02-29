@@ -109,7 +109,7 @@ require.ensure([], () => {
 # 组件
 很多人都在抱怨JSX,但首先要知道,它在 React 中是可选的.   
 JSX 在最后都会通过 Babel 被编译成 JavaScript.你可以直接编写 JavaScript 来替代 JSX,但是在处理 HTML 的时候使用 JSX 会感觉更加自然.  
-特别是对于不懂技术的人来说,他们只可以理解和修改必要的部分.
+特别是对于不懂技术的人来说,他们只可以理解和修改必要的部分.  
 
 JSX 是一种与 XML 类似的 JavaScript 语法扩展.你可以通过一个简单的 JSX 语法转换器来转换它.— [JSX in depth](https://facebook.github.io/react/docs/jsx-in-depth.html)  
 
