@@ -1,7 +1,6 @@
 
 # React.js 最佳实践(2016)
 
-
 Jason@Maxleap  
 原文链接: https://blog.risingstack.com/react-js-best-practices-for-2016  
 译者按：最近React(web/native)依旧如火如荼,相信大家都跃跃欲试,我们团队也开始在React领域有所尝试.  
