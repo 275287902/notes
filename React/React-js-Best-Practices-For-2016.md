@@ -223,6 +223,7 @@ import sample from 'lodash/sample';
 关于如何搭建hot reload,可参考 [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate).
 # 使用ES2015
 前面有提到过,我们在 React.js 组件中使用 JSX,然后使用 Babel.js 进行编译.  
+![](https://risingstack-blog.s3.amazonaws.com/2016/Jan/babel_logo_in_react_js_best_practices_2016-1453212218011.png)  
  Babel 的能力远不止这些,它也可以让我们现在就可以给浏览器编写 ES6/ES2015 代码.在RisingStack,我们在服务器端和客户端都使用了ES2015的特性,ES2015已经可以在最新的LTS Node.js版本中使用了.   
 # 代码检查
 或许你已经给你的 JavaScript 代码制定了代码规范,但是你知道也有用于 React 的代码规范了吗？我们建议你选择一个代码规范,然后照着它说的来做.  
