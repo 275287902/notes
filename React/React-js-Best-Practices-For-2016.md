@@ -230,7 +230,7 @@ import sample from 'lodash/sample';
 在 RisingStack,我们也将 linters 强制运行在 CI 系统上,```git push``` 亦然.可以试试 ```pre-push``` 或者 ```pre-commit```.   
 我们使用标准的 JavaScript 代码风格,并使用 [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) 来检查React.js代码.   
 (是的,我们已经不再使用分号了)
-# GraphQL和Relay
+# GraphQL 和 Relay
 相对而言 GraphQL 和 Relay 还属于新技术,在 RisingStack,我们还没有在产品环境中使用它们,但保持关注.    
 我们写过一个 Relay 的 MongoDB ORM 库,叫做 graffiti,可以使用你已有的 mongoose models 来创建 GraphQL server.   
 如果你想要学习这些新技术,我们建议你可以找来玩一玩.   
