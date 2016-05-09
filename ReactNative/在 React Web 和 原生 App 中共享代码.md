@@ -5,6 +5,7 @@
 
 React Native:
   <img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/mobile.gif" alt="native"  width="200"  style="margin-right: 10px;">
+React Web:
   <img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/web.gif" alt="web" width="700">
 
 
