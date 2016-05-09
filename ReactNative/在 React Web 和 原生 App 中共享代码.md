@@ -88,6 +88,7 @@ ReactNativeWebHelloWorld
 这时候就已经相当清晰了。我们为不同的应用程序有三个不同的入口点 ︰ ```index.ios.js```、 ```index.android.js```和```app/web/index.js```。IOS 和 Android 的入口文件从```app/native```加载组件和容器， web 入口文件从```app/web```加载组件和容器。这给我们带来我们了:
 
 ## 应用程序代码结构
+
 我不会去分析所有的文件，但要指出一些 Web 和 Native 的关键差异。
 
 让我们看看应用程序入口文件,```index.ios.js```看起来是这样:
@@ -110,7 +111,6 @@ class ReactNativeHelloWorld extends Component {
 
 AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeHelloWorld);
 ```
-
 
 ```app/web/index.js```是这样:
 
