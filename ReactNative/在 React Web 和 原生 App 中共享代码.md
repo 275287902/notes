@@ -174,7 +174,7 @@ render() {
 
 **但我们也看看什么他们共享什么...**
 
-实例化```HelloWorld```组件时， ```app/native/containers/App.js```的定义:
+实例化```HelloWorld``` 组件时， ```app/native/containers/App.js``` 的定义:
 
 
 ```
