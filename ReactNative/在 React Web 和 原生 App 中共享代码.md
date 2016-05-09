@@ -139,7 +139,7 @@ render( <Root store={store} />, rootElement );
 
 基本上，React Native 和 React Web 有不同的方式的实例化顶级组件。
 
-<b>正是这些差异，要求我们坚持每个平台独特的渲染逻辑。</b>
+**正是这些差异，要求我们坚持每个平台独特的渲染逻辑。**
 
 让我们也检查两种情况下```HelloWorld```组件的```render```方法。在 Native 中，它看起来是这样:
 
