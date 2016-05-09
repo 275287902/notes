@@ -2,7 +2,6 @@
 本文讲的是一种在 React Web 和 React Native 共享应用程序逻辑,但在每个平台保持独立的渲染特性的方法。示例应用程序可以在 [这里](https://github.com/kauffecup/react-native-web-hello-world) 上找到.
 
 ## 应用
-
 <img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/mobile.gif" alt="native" style="width: 200px;">
 <img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/mobile.gif" alt="native" style="width: 700px;">
 
