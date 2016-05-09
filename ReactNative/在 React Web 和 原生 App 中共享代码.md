@@ -92,6 +92,7 @@ ReactNativeWebHelloWorld
 
 让我们看看应用程序入口文件,```index.ios.js```看起来是这样:
 
+
 ```
 import React, { Component, AppRegistry } from 'react-native';
 import Root           from './app/native/containers/Root';
@@ -110,7 +111,9 @@ class ReactNativeHelloWorld extends Component {
 AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeHelloWorld);
 ```
 
-```app/web/index.js```是这样
+
+```app/web/index.js```是这样:
+
 
 ```
 import React          from 'react';
@@ -165,9 +168,10 @@ render() {
   );
 }
 ```
+
 这就又证明了为什么我们需要坚持每个平台独特的渲染逻辑。 React Native 处理 ```<View>s``` 和```<Text>s``` ，而 web 处理```<div>s``` 和```<span>s```。不仅如此，而且事件系统和样式系统都不太一样。
 
-<b>但我们也看看什么他们共享什么...</b>
+**但我们也看看什么他们共享什么...**
 
 实例化```HelloWorld```组件时， ```app/native/containers/App.js```的定义:
 
@@ -180,7 +184,9 @@ render() {
 
 ```
 
+
 ```app/web/containers/App.js```的定义:
+
 
 ```
 <HelloWorld
@@ -188,6 +194,7 @@ render() {
   color={color}
 />
 ```
+
 这两个```dispatch```方法都是从```react-redux```导入的，```toggleColor```也是从相同的```actions```文件导入。只的渲染方式不同! 应用程序逻辑是共享的! 这是一个大的飞跃!
 
 相比一个接一个的比较相似性和差异性,我们去看看在```package.json```中定义的脚本，让你可以生成并运行这个坏小子......
