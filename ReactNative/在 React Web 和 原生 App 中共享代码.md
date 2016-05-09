@@ -4,7 +4,7 @@
 ## 应用
 <div>
 <img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/mobile.gif" alt="native" style="width: 200px;">
-<img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/mobile.gif" alt="web" style="width: 700px;">
+<img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/web.gif" alt="web" style="width: 700px;">
 </div>
 
 这个应用程序本身是一个非常简单的 Hello World 应用程序。它不仅会显示"Hello World"，而且当您点击它时,颜色会从红色改变成蓝色!哇!
