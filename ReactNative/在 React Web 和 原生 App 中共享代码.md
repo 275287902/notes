@@ -186,7 +186,7 @@ render() {
 ```
 
 
-```app/web/containers/App.js```的定义:
+```app/web/containers/App.js``` 的定义:
 
 
 ```
