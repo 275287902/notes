@@ -1,5 +1,5 @@
 
-这是一种在 React Web 和 React Native 共享应用程序逻辑,但在每个平台保持独立的渲染特性的方法。示例应用程序可以在 [这里](https://github.com/kauffecup/react-native-web-hello-world) 上找到.
+本文讲的是一种在 React Web 和 React Native 共享应用程序逻辑,但在每个平台保持独立的渲染特性的方法。示例应用程序可以在 [这里](https://github.com/kauffecup/react-native-web-hello-world) 上找到.
 
 ## 应用
 ![](http://jkaufman.io/assets/images/post-images/react-web-native-codesharing/mobile.gif)
