@@ -110,6 +110,7 @@ class ReactNativeHelloWorld extends Component {
 }
 
 AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeHelloWorld);
+
 ```
 
 ```app/web/index.js```是这样:
