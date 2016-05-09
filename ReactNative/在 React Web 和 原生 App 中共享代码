@@ -1,0 +1,228 @@
+
+这里是一种同时呈现独特的每个平台的个别组件共享之间反应的 Web 应用程序和一个反应本机应用程序，应用程序逻辑方法。示例应用程序可以在 GitHub 上发现.
+
+##该应用程序
+![](http://jkaufman.io/assets/images/post-images/react-web-native-codesharing/mobile.gif)
+
+这个应用程序本身是一个非常简单的 Hello World(ish)应用程序。它不仅会显示"Hello World"......，而且当您点击...它改变从红色变成蓝色!哇!
+
+## 动机
+Web 和移动...所以为什么不分享你的两个实现之间的代码编写应用程序的反应是令人敬畏？
+
+我只想说马上蝙蝠反应本机反应并不为了将"一次编写，到处运行"的框架。Facebook 不断称之为"一次学习，写无处不在"的框架-这个想法是你定制你到你在写为平台实施。这就是说，你仍然可以应用程序之间共享大量的逻辑。
+
+在这篇文章我将讨论如何可以采取更多的"中间道路"方法之间这些心态。在坚持每个平台特定的呈现代码的同时，我们会共享所有应用程序逻辑。
+
+我们会假设一些知识的反应，反应本机，并终极版.
+
+## 初始安装 + 目录概述
+首先我们需要初始化我们的项目。我们要按照取决于 Facebook 的入门指南中的步骤 ︰
+
+```
+$ npm install -g react-native-cli
+$ react-native init ReactNativeWebHelloWorld
+```
+
+现在，我们看起来像一个目录 ︰
+
+```
+ReactNativeWebHelloWorld
+|-- android
+|-- ios
+|-- node_modules
+|-- .flowconfig
+|-- .gitignore
+|-- .watchmanconfig
+|-- index.android.js
+|-- index.ios.js
++-- package.json
+```
+这包含我们需要为我们的 iOS 和 Android 应用程序的所有文件。现在，我们创建下列目录和文件来配置和运行我们的 Web 应用程序 ︰
+
+```
+ReactNativeWebHelloWorld
++-- web
+    |-- public
+    |   +-- index.html
+    +-- webpack
+        |-- web.dev.config.js
+        +-- web.prod.config.js
+```
+index.html， web.dev.config.js和web.prod.config.js的内容可以所有发现在GitHub回购 — — 我们会更晚些时候潜入他们 (，但如果你想要在其上单击现在，通过各种手段......做它 ！).
+
+我们的目录结构的配置后，我们安装我们需要为应用程序的依赖项 ︰
+```
+$ npm install --save babel babel-polyfill ...
+$ npm install --save-dev autoprefixer babel-core ...
+```
+依赖项的完整列表，请查阅package.json .
+
+设置的最后位 (宇 ！)，我们为我们实际的应用程序初始化的所有文件。我们将会做一个相当"传统"的反应/终极版应用程序 ︰
+
+```
+ReactNativeWebHelloWorld
++-- app
+    |-- actions
+    |-- constants
+    |-- reducers
+    |-- store
+    |-- native
+    |   |-- components
+    |   |-- containers
+    |   +-- style
+    +-- web
+        |-- components
+        |-- containers
+        +-- style
+```
+在这一点上它应该得到相当清楚什么。我们为我们三个不同的应用程序有三个不同的入口点 ︰ index.ios.js、 index.android.js和app/web/index.js。IOS 和 Android 的入口点的组件和容器从加载app/native，和 web 入口点从app/web加载组件和容器。这给我们带来我们...
+
+## 应用程序代码结构
+我不会去通过每个单个文件和该文件的地方，目的在整个混乱中，但我要指出一些关键的差异本机和网络。
+
+让我们看看应用程序入口点，应我们吗？index.ios.js看起来像 ︰
+
+```
+import React, { Component, AppRegistry } from 'react-native';
+import Root           from './app/native/containers/Root';
+import configureStore from './app/store/configureStore.prod.js';
+
+const store = configureStore();
+
+class ReactNativeHelloWorld extends Component {
+  render() {
+    return (
+      <Root store={store} />
+    );
+  }
+}
+
+AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeHelloWorld);
+```
+
+和app/web/index.js...
+
+```
+import React          from 'react';
+import { render }     from 'react-dom';
+import Root           from './containers/Root';
+import configureStore from '../store/configureStore';
+
+// load our css
+require('./styles/style.less');
+
+const store = configureStore();
+const rootElement = document.getElementById('root');
+
+render( <Root store={store} />, rootElement );
+```
+
+好的所以我们关心的区别是什么？
+
+需要注意的主要事情是如何的顶级组件本身呈现到页或应用程序。在本机的土地，我们必须显式定义与应用程序注册表中，寄存器本身顶级反应组件，而在 web 镇我们可以使用ReactDom，我们的Root直接呈现在我们的根元素。
+
+那是什么意思！？
+
+基本上，本机反应和反应网络有不同的方式的实例化的顶级组件。
+
+正是这些差异，要求我们坚持每个平台独特的呈现逻辑。
+
+让我们也检查HelloWorld组件的render方法这两种情况。在国内，它看起来像 ︰
+
+
+```
+render() {
+  const { onPress, color } = this.props;
+  const style = StyleSheet.create({
+    helloWorld: { color: color, textAlign: 'center' }
+  });
+  return (
+    <View>
+      <Text onPress={onPress} style={style.helloWorld}>Hello World</Text>
+    </View>
+  );
+}
+
+```
+
+Web，它看起来像 ︰
+
+```
+render() {
+  const { onClick, color } = this.props;
+  return (
+    <div className="hello-world" onClick={onClick} style={ {color: color} }>Hello World</div>
+  );
+}
+```
+这就加强了中大胆起来的时点有关于为什么我们需要坚持每个平台独特的呈现逻辑。反应本机在<View>s 和<Text>s 交易，而 web 处理<div>s 和<span>s。不只，但事件系统和风格系统都不同。
+
+但让我们看看什么分担他们第二次...
+
+当实例化HelloWorld组件， app/native/containers/App.js定义...
+
+
+```
+<HelloWorld
+  onPress={() => dispatch(toggleColor())}
+  color={color}
+/>
+
+```
+
+和app/web/containers/App.js定义...
+
+```
+<HelloWorld
+  onClick={() => dispatch(toggleColor())}
+  color={color}
+/>
+```
+这两种dispatch方法经注射react-redux，和toggleColor从相同的actions文件导入。只的呈现方式是不同的 ！共享应用程序逻辑 ！这是一个飞跃天奇迹 ！
+
+而比去通过每个个体差异性和相似性一个接一个，（因为这将导致在小说的价值的解释） 我们要前进到在package.json中定义的脚本，使您可以生成并运行这个坏小子......
+
+##配置的脚本
+### 在开发和生产运行
+
+Package.json有 8 定义的脚本:
+
+1. start  
+2. ios-bundle
+3. ios-dev-bundle
+4. android-bundle
+5. android-dev-bundle
+6. web-bundle
+7. web-dev
+
+###start
+
+start时运行捆绑销售本机应用程序中使用。当你打开要么 xcode 项目或 android 工作室和命中"运行项目"时，它踢关闭节点服务器通过start命令。每次您更改 JavaScript，而不需要重建和重新编译您的应用程序，你只需刷新应用程序，并且这些更改将奇迹般地存在。因为这不是我不会比更多的细节，-更多的信息可以上 Facebook 的反应的本机入门指南发现反应当地导游。
+
+###bundlin
+
+为ios-bundle、 ios-dev-bundle、 android-bundle和android-dev-bundle，此脚本生成 JavaScript 束 （或缩小dev的存在与否不缩小），并将其放置在相应的项目预计它为您的设备上本地运行。再次，你可以找到更多的信息在您的设备上 Facebook 的反应的本机入门上运行.
+
+###web 镇
+
+web-dev webpack 服务器上的端口 3001 拉开序幕，它利用热重装用一些 redux-时间-机-魔法有疯狂的真棒开发经验，在那里你可以倒带和还原操作在您的应用程序。
+
+web-bundle创建缩小的 JavaScript 包 （也房子缩小 css），并将其放置在index.html中你可以搭配任何静态文件服务器的web/public。
+
+###清除缓存
+
+时不时地，当反应本机做的一件事，你会发誓你已经改变了一些东西，但可惜它仍引起打破您的应用程序 ！哦不 ！我们是做什么工作的 ！
+
+```npm run clear-cache```
+
+##进一步的配置
+Webpack 设置将web PLATFORM_ENV环境变量。您可以使用此检查有条件地加载取决于不同的文件，如果你正在构建你的本机或 web 应用程序。举个例子-你可以抽象出本地存储机制之间的区别。
+
+##你这得到什么？
+嗯，首先，这是很有趣地设置。经常是良好教育的纯精神在做事情。但如果这还不够为雅，考虑在您的应用程序-一次搞定它的行动，减速机，要求层造成任何 bug 会不会取消您的 web 和移动版本中的 bug。
+
+它还允许在这两个平台上相当快速发展。能够得到我反应/redux 的应用程序运行在手机功能完成后大约两天的努力之一了
+
+##唷 ！
+谢谢你朵朵与我，通过这一个。我知道这是很多。
+
