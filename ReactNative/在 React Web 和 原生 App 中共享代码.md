@@ -3,12 +3,12 @@
 
 ## 应用
 
-React Native:
+**React Native:**
 <p>
   <img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/mobile.gif" alt="native"  width="200"  style="margin-right: 10px;">
 </p>
 
-React Web:
+**React Web:**
 <p>
   <img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/web.gif" alt="web" width="700">
 </p>
