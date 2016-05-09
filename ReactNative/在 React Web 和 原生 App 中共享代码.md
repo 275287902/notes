@@ -2,10 +2,11 @@
 本文讲的是一种在 React Web 和 React Native 共享应用程序逻辑,但在每个平台保持独立的渲染特性的方法。示例应用程序可以在 [这里](https://github.com/kauffecup/react-native-web-hello-world) 上找到.
 
 ## 应用
-<p>
+
+React Native:
   <img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/mobile.gif" alt="native"  width="200"  style="margin-right: 10px;">
   <img src="https://raw.githubusercontent.com/huangciyin/notes/master/ReactNative/images/web.gif" alt="web" width="700">
-</p>
+
 
 这个应用程序本身是一个非常简单的 Hello World 应用程序。它不仅会显示"Hello World"，而且当您点击它时,颜色会从红色改变成蓝色!哇!
 
