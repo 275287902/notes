@@ -3,7 +3,6 @@
 
 ## 应用
 ![React Native](images/mobile.gif)
-
 ![React Web](images/web.gif)
 
 这个应用程序本身是一个非常简单的 Hello World 应用程序。它不仅会显示"Hello World"，而且当您点击它时,颜色会从红色改变成蓝色!哇!
