@@ -113,7 +113,7 @@ AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeHello
 
 ```
 
-```app/web/index.js```是这样:
+```app/web/index.js``` 是这样:
 
 
 ```
